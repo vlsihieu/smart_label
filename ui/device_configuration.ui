@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui version="4.0">
+  <class>Device ConfigurationPage</class>
+  <widget class="QWidget" name="Device ConfigurationPage">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1050</width>
+        <height>720</height>
+      </rect>
+    </property>
+    <layout class="QVBoxLayout" name="pageLayout">
+      <item>
+        <widget class="QLabel" name="pageTitle">
+          <property name="text">
+            <string>Device Configuration</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QGroupBox" name="configurationGroup">
+          <property name="title">
+            <string>Device configuration (BLE GATT)</string>
+          </property>
+          <layout class="QFormLayout" name="configurationForm">
+            <item row="0" column="0">
+              <widget class="QLabel" name="advIntervalSpinLabel">
+                <property name="text">
+                  <string>Advertising interval</string>
+                </property>
+              </widget>
+            </item>
+            <item row="0" column="1">
+              <widget class="QSpinBox" name="advIntervalSpin">
+                <property name="minimum">
+                  <number>1</number>
+                </property>
+                <property name="maximum">
+                  <number>86400000</number>
+                </property>
+                <property name="value">
+                  <number>1000</number>
+                </property>
+                <property name="suffix">
+                  <string> ms</string>
+                </property>
+              </widget>
+            </item>
+            <item row="2" column="0">
+              <widget class="QLabel" name="sampleIntervalSpinLabel">
+                <property name="text">
+                  <string>Measurement interval</string>
+                </property>
+              </widget>
+            </item>
+            <item row="1" column="1">
+              <widget class="QSpinBox" name="sampleIntervalSpin">
+                <property name="minimum">
+                  <number>1</number>
+                </property>
+                <property name="maximum">
+                  <number>86400000</number>
+                </property>
+                <property name="value">
+                  <number>10</number>
+                </property>
+                <property name="suffix">
+                  <string> s</string>
+                </property>
+              </widget>
+            </item>
+            <item row="2" column="0">
+              <widget class="QLabel" name="highThresholdSpinLabel">
+                <property name="text">
+                  <string>High threshold (°C)</string>
+                </property>
+              </widget>
+            </item>
+            <item row="2" column="1">
+              <widget class="QDoubleSpinBox" name="highThresholdSpin">
+                <property name="minimum">
+                  <double>-100</double>
+                </property>
+                <property name="maximum">
+                  <double>200</double>
+                </property>
+                <property name="decimals">
+                  <number>2</number>
+                </property>
+                <property name="value">
+                  <double>8.0</double>
+                </property>
+              </widget>
+            </item>
+            <item row="3" column="0">
+              <widget class="QLabel" name="lowThresholdSpinLabel">
+                <property name="text">
+                  <string>Low threshold (°C)</string>
+                </property>
+              </widget>
+            </item>
+            <item row="3" column="1">
+              <widget class="QDoubleSpinBox" name="lowThresholdSpin">
+                <property name="minimum">
+                  <double>-100</double>
+                </property>
+                <property name="maximum">
+                  <double>200</double>
+                </property>
+                <property name="decimals">
+                  <number>2</number>
+                </property>
+                <property name="value">
+                  <double>2.0</double>
+                </property>
+              </widget>
+            </item>
+            <item row="4" column="0">
+              <widget class="QLabel" name="payloadEditLabel">
+                <property name="text">
+                  <string>Advertising payload (hex)</string>
+                </property>
+              </widget>
+            </item>
+            <item row="4" column="1">
+              <widget class="QLineEdit" name="payloadEdit">
+                <!--Default value assigned by Python app-->
+              </widget>
+            </item>
+            <item row="5" column="0">
+              <widget class="QLabel" name="deviceTimeEditLabel">
+                <property name="text">
+                  <string>Device time (ISO8601)</string>
+                </property>
+              </widget>
+            </item>
+            <item row="5" column="1">
+              <widget class="QLineEdit" name="deviceTimeEdit">
+                <!--Default value assigned by Python app-->
+              </widget>
+            </item>
+          </layout>
+        </widget>
+      </item>
+      <item>
+        <layout class="QHBoxLayout" name="configControls">
+          <item>
+            <widget class="QPushButton" name="readConfigButton">
+              <property name="text">
+                <string>Read from Device</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="writeConfigButton">
+              <property name="text">
+                <string>Write to Device</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="resetConfigButton">
+              <property name="text">
+                <string>Reset Defaults</string>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+      <item>
+        <widget class="QLabel" name="configMessageLabel">
+          <property name="text">
+            <string>Configuration changes require a connected device. Demo mode does not write firmware.</string>
+          </property>
+        </widget>
+      </item>
+    </layout>
+  </widget>
+  <resources/>
+  <connections/>
+</ui>

@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+  <class>MainWindow</class>
+  <widget class="QMainWindow" name="MainWindow">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1560</width>
+        <height>940</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>Temp Label Manager — Phase 1 v3</string>
+    </property>
+    <widget class="QWidget" name="centralwidget">
+      <layout class="QVBoxLayout" name="shellLayout">
+        <property name="leftMargin">
+          <number>0</number>
+        </property>
+        <property name="topMargin">
+          <number>0</number>
+        </property>
+        <property name="rightMargin">
+          <number>0</number>
+        </property>
+        <property name="bottomMargin">
+          <number>0</number>
+        </property>
+        <property name="spacing">
+          <number>0</number>
+        </property>
+        <item>
+          <widget class="QFrame" name="headerBar">
+            <layout class="QHBoxLayout" name="headerLayout">
+              <property name="leftMargin">
+                <number>9</number>
+              </property>
+              <property name="topMargin">
+                <number>9</number>
+              </property>
+              <property name="rightMargin">
+                <number>9</number>
+              </property>
+              <property name="bottomMargin">
+                <number>9</number>
+              </property>
+              <property name="spacing">
+                <number>8</number>
+              </property>
+              <item>
+                <widget class="QPushButton" name="menuToggleButton">
+                  <property name="text">
+                    <string>☰</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QLabel" name="logoLabel">
+                  <property name="text">
+                    <string>🌡</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QLabel" name="appTitleLabel">
+                  <property name="text">
+                    <string>Temp Label Manager</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QLabel" name="appVersionLabel">
+                  <property name="text">
+                    <string>v1.0</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QLabel" name="headerSpacer">
+                  <property name="text">
+                    <string />
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QLabel" name="adapterStatusLabel">
+                  <property name="text">
+                    <string>● Demo Mode  •  BLE not connected</string>
+                  </property>
+                </widget>
+              </item>
+              <item>
+                <widget class="QPushButton" name="settingsTopButton">
+                  <property name="text">
+                    <string>⚙  Settings</string>
+                  </property>
+                </widget>
+              </item>
+            </layout>
+          </widget>
+        </item>
+        <item>
+          <layout class="QHBoxLayout" name="mainBody">
+            <property name="leftMargin">
+              <number>0</number>
+            </property>
+            <property name="topMargin">
+              <number>0</number>
+            </property>
+            <property name="rightMargin">
+              <number>0</number>
+            </property>
+            <property name="bottomMargin">
+              <number>0</number>
+            </property>
+            <property name="spacing">
+              <number>8</number>
+            </property>
+            <item>
+              <widget class="QFrame" name="sidebar">
+                <layout class="QVBoxLayout" name="sidebarLayout">
+                  <property name="leftMargin">
+                    <number>12</number>
+                  </property>
+                  <property name="topMargin">
+                    <number>12</number>
+                  </property>
+                  <property name="rightMargin">
+                    <number>12</number>
+                  </property>
+                  <property name="bottomMargin">
+                    <number>12</number>
+                  </property>
+                  <property name="spacing">
+                    <number>9</number>
+                  </property>
+                  <item>
+                    <widget class="QLabel" name="sideBrand">
+                      <property name="text">
+                        <string>🌡  TEMP LABEL</string>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QPushButton" name="navDevices">
+                      <property name="text">
+                        <string>◉  Devices</string>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QPushButton" name="navConfiguration">
+                      <property name="text">
+                        <string>⚙  Configuration</string>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QPushButton" name="navDownload">
+                      <property name="text">
+                        <string>⬇  Data Download</string>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QPushButton" name="navHistory">
+                      <property name="text">
+                        <string>▥  History &amp; Graph</string>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QPushButton" name="navDeviceInfo">
+                      <property name="text">
+                        <string>ⓘ  Device Info</string>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QPushButton" name="navSettings">
+                      <property name="text">
+                        <string>⚙  Settings</string>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QLabel" name="sidebarSpacer">
+                      <property name="text">
+                        <string />
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="QLabel" name="sideFooter">
+                      <property name="text">
+                        <string>DESKTOP APPLICATION
+Phase 1 • Simulator</string>
+                      </property>
+                    </widget>
+                  </item>
+                </layout>
+              </widget>
+            </item>
+            <item>
+              <widget class="QStackedWidget" name="pageStack">
+                <widget class="QWidget" name="placeholderPage">
+                  <layout class="QVBoxLayout" name="placeholderLayout">
+                    <property name="leftMargin">
+                      <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>0</number>
+                    </property>
+                    <property name="spacing">
+                      <number>8</number>
+                    </property>
+                  </layout>
+                </widget>
+              </widget>
+            </item>
+          </layout>
+        </item>
+      </layout>
+    </widget>
+    <widget class="QStatusBar" name="statusbar" />
+  </widget>
+  <resources />
+  <connections />
+</ui>

@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui version="4.0">
+  <class>Data DownloadPage</class>
+  <widget class="QWidget" name="Data DownloadPage">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1050</width>
+        <height>720</height>
+      </rect>
+    </property>
+    <layout class="QVBoxLayout" name="pageLayout">
+      <item>
+        <widget class="QLabel" name="pageTitle">
+          <property name="text">
+            <string>Data Download</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <layout class="QHBoxLayout" name="downloadFields">
+          <item>
+            <widget class="QLabel" name="startRecordLabel">
+              <property name="text">
+                <string>Start record</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QSpinBox" name="startRecordSpin">
+              <property name="maximum">
+                <number>1000000</number>
+              </property>
+              <property name="minimum">
+                <number>1</number>
+              </property>
+              <property name="value">
+                <number>1</number>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QLabel" name="endRecordLabel">
+              <property name="text">
+                <string>End record</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QSpinBox" name="endRecordSpin">
+              <property name="maximum">
+                <number>1000000</number>
+              </property>
+              <property name="value">
+                <number>12450</number>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+      <item>
+        <widget class="QCheckBox" name="autoResumeCheckBox">
+          <property name="text">
+            <string>Auto resume from last verified checkpoint (ACK)</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <layout class="QHBoxLayout" name="downloadActions">
+          <item>
+            <widget class="QPushButton" name="startDownloadButton">
+              <property name="text">
+                <string>Start Download</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="pauseDownloadButton">
+              <property name="text">
+                <string>Pause</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="interruptButton">
+              <property name="text">
+                <string>Simulate BLE Loss</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="resumeButton">
+              <property name="text">
+                <string>Resume</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="resetDownloadButton">
+              <property name="text">
+                <string>Reset Demo</string>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+      <item>
+        <widget class="QProgressBar" name="downloadProgressBar">
+          <property name="value">
+            <number>0</number>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <layout class="QHBoxLayout" name="downloadStatusRow">
+          <item>
+            <widget class="QLabel" name="downloadStatusLabel">
+              <property name="text">
+                <string>Transfer status</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QLabel" name="downloadStatusValue">
+              <property name="text">
+                <string>—</string>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+      <item>
+        <layout class="QHBoxLayout" name="lastVerifiedRow">
+          <item>
+            <widget class="QLabel" name="lastVerifiedLabel">
+              <property name="text">
+                <string>Last verified record</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QLabel" name="lastVerifiedValue">
+              <property name="text">
+                <string>—</string>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+      <item>
+        <layout class="QHBoxLayout" name="nextRecordRow">
+          <item>
+            <widget class="QLabel" name="nextRecordLabel">
+              <property name="text">
+                <string>Next record</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QLabel" name="nextRecordValue">
+              <property name="text">
+                <string>—</string>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+      <item>
+        <layout class="QHBoxLayout" name="downloadSpeedRow">
+          <item>
+            <widget class="QLabel" name="downloadSpeedLabel">
+              <property name="text">
+                <string>Progress</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QLabel" name="downloadSpeedValue">
+              <property name="text">
+                <string>—</string>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+      <item>
+        <widget class="QTableWidget" name="downloadTable">
+          <property name="alternatingRowColors">
+            <bool>true</bool>
+          </property>
+          <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="columnCount">
+            <number>5</number>
+          </property>
+          <property name="rowCount">
+            <number>0</number>
+          </property>
+          <column>
+            <property name="text">
+              <string>Record ID</string>
+            </property>
+          </column>
+          <column>
+            <property name="text">
+              <string>Timestamp</string>
+            </property>
+          </column>
+          <column>
+            <property name="text">
+              <string>Temp (°C)</string>
+            </property>
+          </column>
+          <column>
+            <property name="text">
+              <string>Alarm</string>
+            </property>
+          </column>
+          <column>
+            <property name="text">
+              <string>Integrity</string>
+            </property>
+          </column>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLabel" name="downloadWarningLabel">
+          <property name="text">
+            <string>Simulator: interruption and recovery can be demonstrated without hardware.</string>
+          </property>
+        </widget>
+      </item>
+    </layout>
+  </widget>
+  <resources/>
+  <connections/>
+</ui>

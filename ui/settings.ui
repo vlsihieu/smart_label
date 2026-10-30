@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui version="4.0">
+  <class>SettingsPage</class>
+  <widget class="QWidget" name="SettingsPage">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1050</width>
+        <height>720</height>
+      </rect>
+    </property>
+    <layout class="QVBoxLayout" name="pageLayout">
+      <item>
+        <widget class="QLabel" name="pageTitle">
+          <property name="text">
+            <string>Settings</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QGroupBox" name="settingsGroup">
+          <property name="title">
+            <string>Application settings</string>
+          </property>
+          <layout class="QVBoxLayout" name="settingsGroupLayout">
+            <item>
+              <widget class="QLabel" name="bleBackendLabel">
+                <property name="text">
+                  <string>BLE backend: Bleak (Phase 2 integration)</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QLabel" name="modeLabel">
+                <property name="text">
+                  <string>Phase 1: Local simulator</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QCheckBox" name="darkThemeCheckBox">
+                <property name="text">
+                  <string>Enable dark theme (future)</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QLabel" name="dataStoreLabel">
+                <property name="text">
+                  <string>Storage: SQLite in app data folder (planned)</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QLabel" name="protoLabel">
+                <property name="text">
+                  <string>Protocol UUID and record format: pending customer confirmation</string>
+                </property>
+              </widget>
+            </item>
+          </layout>
+        </widget>
+      </item>
+    </layout>
+  </widget>
+  <resources/>
+  <connections/>
+</ui>
